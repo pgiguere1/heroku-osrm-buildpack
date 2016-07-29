@@ -10,9 +10,7 @@ The Buildpack will download and compile OSRM and depending on the data files pro
 git init
 heroku apps:create
 heroku buildpacks:set https://github.com/chrisanderton/heroku-osrm-buildpack
-curl -L https://raw.githubusercontent.com/Project-OSRM/osrm-backend/develop/profiles/car.lua -o profile.lua
-mkdir lib
-curl -L https://raw.githubusercontent.com/Project-OSRM/osrm-backend/develop/profiles/lib/access.lua -o lib/access.lua
+curl -L https://raw.githubusercontent.com/Project-OSRM/osrm-backend/5.3/profiles/car.lua -o profile.lua
 git add .
 git commit -a -m "add profile"
 heroku config:set OSRM_DATA_PBF_FILE_URL=http://download.geofabrik.de/europe/great-britain/england/greater-london-latest.osm.pbf
@@ -23,7 +21,7 @@ git push heroku master
 
 ###OSRM Release Version
 
-Uses OSRM release 4.8.1 by default - this can be overridden by setting the `OSRM_VERSION` config variable.
+Uses OSRM release 5.3.0 by default - this can be overridden by setting the `OSRM_VERSION` config variable.
 
 ###Procfile
 

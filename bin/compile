@@ -35,7 +35,7 @@ function indent() {
 
 source $BIN_DIR/compile_steps/env
 
-export OSRM_VERSION=${OSRM_VERSION:-4.8.1}
+export OSRM_VERSION=${OSRM_VERSION:-5.3.0}
 topic "Using OSRM version $OSRM_VERSION"
 
 source $BIN_DIR/compile_steps/apt
