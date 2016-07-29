@@ -56,7 +56,7 @@ if [ -f $1/data.pbf ] && [ -f $1/profile.lua ]; then
 fi
 
 if [ -f $1/data.osrm ] && [ ! -f $1/data.osrm.core ] && [ -f $1/profile.lua ]; then
-  source $BIN_DIR/compile_steps/osrm_prepare
+  source $BIN_DIR/compile_steps/osrm_contract
 fi
 
 source $BIN_DIR/compile_steps/osrm_clean
