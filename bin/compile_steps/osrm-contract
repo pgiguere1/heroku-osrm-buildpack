@@ -1,0 +1,4 @@
+cd $BUILD_DIR/
+
+topic "Preparing OSRM data"
+$BUILD_DIR/osrm-contract $BUILD_DIR/data.osrm | indent

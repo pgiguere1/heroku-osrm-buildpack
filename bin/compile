@@ -40,7 +40,7 @@ topic "Using OSRM version $OSRM_VERSION"
 
 source $BIN_DIR/compile_steps/apt
 
-if [ -f $CACHE_DIR/$OSRM_VERSION/osrm-extract ] && [ -f $CACHE_DIR/$OSRM_VERSION/osrm-prepare ] && [ -f $CACHE_DIR/$OSRM_VERSION/osrm-routed ]; then
+if [ -f $CACHE_DIR/$OSRM_VERSION/osrm-extract ] && [ -f $CACHE_DIR/$OSRM_VERSION/osrm-contract ] && [ -f $CACHE_DIR/$OSRM_VERSION/osrm-routed ]; then
   topic "Using cached OSRM binaries"
   cp $CACHE_DIR/$OSRM_VERSION/* $BUILD_DIR
 else
