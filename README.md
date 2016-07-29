@@ -11,6 +11,9 @@ git init
 heroku apps:create
 heroku buildpacks:set https://github.com/chrisanderton/heroku-osrm-buildpack
 curl -L https://raw.githubusercontent.com/Project-OSRM/osrm-backend/5.3/profiles/car.lua -o profile.lua
+mkdir lib
+curl -L https://raw.githubusercontent.com/Project-OSRM/osrm-backend/5.3/profiles/lib/access.lua -o lib/access.lua
+curl -L https://raw.githubusercontent.com/Project-OSRM/osrm-backend/5.3/profiles/lib/destination.lua -o lib/destination.lua
 git add .
 git commit -a -m "add profile"
 heroku config:set OSRM_DATA_PBF_FILE_URL=http://download.geofabrik.de/europe/great-britain/england/greater-london-latest.osm.pbf
