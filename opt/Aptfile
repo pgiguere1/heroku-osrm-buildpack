@@ -4,3 +4,13 @@ libboost1.55-all-dev
 libtbb-dev
 libluabind-dev
 libstxxl-dev
+boost
+git
+libzip
+libstxxl
+libxml2
+lua51
+luajit
+luabind
+tbb
+ccache
